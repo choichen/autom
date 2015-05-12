@@ -1,12 +1,12 @@
 package me.chending.ini
 
-import me.chending.InputHelper.SourceWrapper
 import me.chending.auto.{Status, StatusType}
 
 import scala.collection.{immutable, mutable}
+import scala.io.Source
 import scala.language.{implicitConversions, postfixOps}
 
-class INIParser(val inputSource: SourceWrapper) {
+class INIParser(val inputSource: Source) {
     protected val mInputSource = inputSource
     protected val mBuffer = new StringBuilder
     protected val init = "Init"
